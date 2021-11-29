@@ -1,0 +1,11 @@
+namespace: kube-system
+
+image:
+  repository: gcr.io/k8snetworkplumbingwg
+  name: multus-cni
+  tag: v3.7.1
+
+daemonset:
+  args:
+    - "--multus-conf-file=auto"
+    - "--cni-version=0.3.1"
